@@ -20,7 +20,7 @@
         <script type="text/javascript" src="javascript/graph.js"></script>
       </div>
       <div class="txt">
-        <p style="font-size:20px;">Welcome to <b>Viralert Test Request</b>. If you are at a high risk of developing a serious illness related to COVID-19, please request a test by submitting the form below. Within 5 days, a test will be delivered to your door.<br><br>Currently, we have <span style="font-size:30px;color:black;background-color: white;">0&#x0337</span> tests available.<br><br>If no tests are available, then all of the inventory has been requested, and more will hopefully be available shortly. If you can afford to pay for a test or would like to help support people who cannot, please consider donating using the PayPal button below. </p>
+        <p style="font-size:20px;">Welcome to <b>Viralert Test Request</b>. If you are at a high risk of developing a serious illness related to COVID-19, and have symptomse related to COVID-19, please enter your symptoms and request a test by submitting the form below. If we have deemed that you are likely to have COVID-19, within 5 days, a test will be delivered to your door (we will communicate with you by email throughout this whole process).<br><br>Currently, we have <span style="font-size:30px;color:black;background-color: white;">0&#x0337</span> tests available.<br><br>If no tests are available, then all of the inventory has been requested, and more will hopefully be available shortly. If you can afford to pay for a test or would like to help support people who cannot, please consider donating using the PayPal button below. </p>
       </div>
       <div class="form">
         <form id="frm1" action="javascript:void(0);" method="post">
@@ -28,7 +28,8 @@
           Email: <br><input type="text" name="email" value="" id="email" placeholder="johnsmith@example.com"><br><br>
           Phone Number: <br><input type="text" name="pn" value="" id="pn" placeholder="123-456-7890"><br><br>
           Address: <br><input type="text" name="address" value="" id="address" placeholder="123 Example Rd."><br><br>
-          <p style="font-size:15px;"> Would you like to schedule a video call to help with administering the test?&nbsp;&nbsp;<input type="checkbox" id="checkbox" name="telecall" value="telecall"></p>
+          Please List Symptoms and Explain their Severity: <br><textarea id="sympt" placeholder="List symptoms here..." cols="80" rows="10"></textarea>
+<p style="font-size:20px;"> Would you like to schedule a video call to help with administering the test?&nbsp;&nbsp;<input type="checkbox" id="checkbox" name="telecall" value="telecall"></p>
           <button onclick="emailFunc()"><p style="font-size: 20px;">Try it</button>
         </form>
       </div>

@@ -12,6 +12,7 @@ function emailFunc() {
 	var email = content[1];
 	var pn = content[2];
 	var address = content[3];
+	var sympt = content[4]
 	var tc = document.getElementById('checkbox').checked
 	
 	console.log(content)
@@ -24,7 +25,8 @@ function emailFunc() {
 	var elength = email.length
 	var pnlength = pn.length
 	var alength = address.length
-	if (fnlength>0 && elength>0 && pnlength>0 && alength>0){
+	var slength = sympt.length
+	if (fnlength>0 && elength>0 && pnlength>0 && alength>0 && slength>0){
 		function validatePN(){
 			var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
 			var returning = phoneRGEX.test(pn)
@@ -45,6 +47,7 @@ function emailFunc() {
 					"email": email,
 					"pn": pn,
 					"address": address,
+					"sympt": sympt,
 					"telecall": tc
 				}
 
@@ -56,6 +59,7 @@ function emailFunc() {
 				document.getElementById('pn').value = "";
 				document.getElementById('email').value = "";
 				document.getElementById('fname').value = "";
+				document.getElementById('sympt').value = "";
 				document.getElementById("checkbox").checked = false
 				alert("Successfully submitted. You will receive a confirmation email within 48 hours to confirm delivery.");		
 		} else if (validateEmail(email) && !validatePN(pn)) {

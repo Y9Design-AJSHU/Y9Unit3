@@ -142,3 +142,11 @@ canvas {
 	height:100% !important;
 }
 
+textarea {
+	background: url(../images/covidtransparent.png) center center repeat; /* This ruins default border */
+	border: 1px solid #888; 
+	font-family: Assistant;
+	font-size: 20px;
+	color: black;
+
+}
