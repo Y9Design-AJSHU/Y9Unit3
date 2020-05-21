@@ -1,3 +1,4 @@
+/*Below is the creation of the grid container and the styling of it*/
 .grid-container {
 	display: grid;
 	grid-template-areas:
@@ -8,27 +9,26 @@
 		'newstitle newstitle newstitle'
 		'newsI newsII newsIII'
 		'aboutUs aboutUs aboutUs';
-	/* This helps maintain consistency when scaling, by keeping all grid columns approximately 1/6 of the page in width */
 	grid-gap: 9px;
 	background-color: #3c8cc4;
 	padding: 10px;
 	margin: 0px;
 }
-
+/*Below is the styling for the title section. Here, the background is made the repeated image of the COVID-19 virus particle.*/
 .title {
 	background-image: url("../images/covid.jpeg");
 	background-size: 70px;
 	background-repeat: repeat;
 	background-attachment: fixed;
 }
-
+/*Here is the styling of the text in the title section*/
 .title>h1 {
 	text-align: center;
 	font-size: 100px;
 	padding: 0;
 	margin: 10px;
 }
-
+/*Below is where all thegrid-areas are assigned a class*/
 .graph {
 	grid-area: graph;
 }
@@ -79,17 +79,13 @@ p {
 	padding: 0px;
 	margin: 0px;
 }
-
-/*This assigns a class to each grid-area, so HTML elements can be put within the areas */
-
-
-
-
+/*This makes sure all text uses the Assisstant font and has the colour of the WHO blue*/
 body {
 	font-family: 'Assistant', sans-serif;
 	color: #3c8cc4;
 }
 
+/*This styles the text boxes within the form*/
 input[type=text],
 select {
 	color: #3c8cc4;
@@ -102,6 +98,7 @@ select {
 	box-sizing: border-box;
 }
 
+/*This styles the button in the form*/
 button {
 	width: 100%;
 	background-color: #3c8cc4;
@@ -113,35 +110,35 @@ button {
 	cursor: pointer;
 }
 
+/*This changes the colour of the button when the user hovers over it for a stylistic effect*/
 button:hover {
 	background-color: #3c9DD7;
 }
 
+/*This styles all the divs and makes sure the site looks aesthetically pleasing and there are no gaps*/
 div {
 	color: #3c8cc4;
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 20px;
 }
-
-
-
+/*This styles the body and the whole HTML ile to make sure it takes up the whole screen and there are no gaps on the side*/
 html,
 body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
-
+/*This sets the font for paragaraph elements*/
 p {
 	font-size: 15px;
 }
-
+/*This makes sure the chart.js graph is the right size and takes up all the space (and can scale correctly)*/
 canvas {
 	width:100%;
 	height:100% !important;
 }
-
+/*This styles the text area within the form.*/
 textarea {
 	background: url(../images/covidtransparent.png) center center repeat; /* This ruins default border */
 	border: 1px solid #888; 

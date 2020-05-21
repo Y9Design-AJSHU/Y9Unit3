@@ -2,26 +2,41 @@
 <html>
 
   <head>
+    <!--Below is the link to the Google Font that is being used on the site-->
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <!--Below is the link to the Chart.js javascript file that must be linked to use Chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <!--Below is the link to the JavaScript file I wrote (in the javascript folder) that contains all of the Javascript that sends the form to my email using EmailJS-->
     <script type="text/javascript" src="javascript/emailFunction.js"></script>
+    <!--Below is the link to the CSS file I wrote (in the CSS folder) that contains the styling for this document-->
     <link rel="stylesheet" href="css/css1.css">
+    <!--Below is the link to the Javascript file that must be linked in order to use EmailJS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <!--Below is the link to the javascript file that contains the APIKey for EmailJS-->
     <script type="text/javascript" src="javascript/emailKey.js"></script>
+    <!--Below is the title of the page-->
+    <title>Viralert</title>
+    <!--Below is the icon that will show in the tab-->
+    <link rel="shortcut icon" href="images/favicon.ico">
   </head>
 
   <body>
+    <!--Below is the title div which will show the title in large bold letters-->
     <div class="title">
-      <h1>VIRALERT</h1>
+      <h1><b>VIRALERT</b></h1>
     </div>
+    <!--Below is the beginning of the grid-container which holds all of the grid elements-->
     <div class="grid-container">
+      <!--Below is the graph element which shows the Chart.JS graph-->
       <div class="graph"><canvas id="chart" style="width: 100%;
         height:700!;"></canvas>
         <script type="text/javascript" src="javascript/graph.js"></script>
       </div>
+      <!--Below is the info text-->
       <div class="txt">
-        <p style="font-size:20px;">Welcome to <b>Viralert Test Request</b>. If you are at a high risk of developing a serious illness related to COVID-19, and have symptomse related to COVID-19, please enter your symptoms and request a test by submitting the form below. If we have deemed that you are likely to have COVID-19, within 5 days, a test will be delivered to your door (we will communicate with you by email throughout this whole process).<br><br>Currently, we have <span style="font-size:30px;color:black;background-color: white;">0&#x0337</span> tests available.<br><br>If no tests are available, then all of the inventory has been requested, and more will hopefully be available shortly. If you can afford to pay for a test or would like to help support people who cannot, please consider donating using the PayPal button below. </p>
+        <p style="font-size:20px;">Welcome to <b>Viralert Test Request</b>. If you are at a high risk of developing a serious illness related to COVID-19, and have symptomse related to COVID-19, please enter your symptoms and request a test by submitting the form below. If we have deemed that you are likely to have COVID-19, within 5 days, a test will be delivered to your door (we will communicate with you by email throughout this whole process).<br><br>Currently, we have <span style="font-size:30px;color:black;background-color: white;">0&#x0337</span> tests available.<br><br>If no tests are available, then all of the inventory has been requested, and more will hopefully be available shortly. If you can afford to pay for a test or would like to help support people who cannot, please consider donating using the PayPal button below. Reminder: We only operate in Toronto, Canada, but we are trying to expand. YOUR INFORMATION WILL ONLY BE SEEN BY THE CREATOR OF THE SITE TO COMMUNICATE WITH YOU AND JUST YOUR ADDRESS WILL BE SHOWN TO THE DRIVER</p>
       </div>
+      <!--Below is the test reauest form. It asks for the user's: name, email, phone number, address, and symptoms. It also asks whether the user wants to have a video-call with a doctor to help administer the test.-->
       <div class="form">
         <form id="frm1" action="javascript:void(0);" method="post">
           Full name: <br><input type="text" name="fname" value="" id="fname" placeholder="John Smith"><br><br>
@@ -33,6 +48,7 @@
           <button onclick="emailFunc()"><p style="font-size: 20px;">Try it</button>
         </form>
       </div>
+      <!--Below is the Paypal donation form, which takes you to Paypal, so you can pay to help buy tests.-->
       <div class="donate">
         <h5 style="text-align: center;padding: 0;margin: 10px;"> Please Donate to Help us Buy Tests! </h5>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -42,9 +58,11 @@
         <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
         </form>
       </div>
+      <!--Below is the title for the News.-->
       <div class="newstitle">
         <h3 style="padding=0;margin: 0;">------- News -------</h1>
       </div>
+      <!--Below are the three news elements.-->
       <div class="newsI">
         <a href="https://www.ctvnews.ca/health/coronavirus/how-the-first-canadian-covid-19-vaccine-trial-will-work-1.4943235"><p style="font-size: 20px">How the first Canadian COVID-19 vaccine trial will work</p></a>
         <p style="font-size: 17px;"><br><b>Ryan Flanagan</b> || CTVNews.ca Writer<br><br></p>
@@ -60,6 +78,7 @@
         <p style="font-size: 17px;"><br><b>Government of Ontario</b> || Press Release<br><br></p>
         <img src="images/open.jpg" height=150px>
       </div>
+      <!--Below is the About Us section which talks about what the site is and why is was created.-->
       <div class="aboutUs">
         <p> Viralert is a service that allows those who are at a high risk of getting a serious illness from COVID-19 to receive tests as soon as possible. Volunteers will drive the tests to you and back to the lab, and will contact you with your results. Because not everyone can afford tests, we ask that if you can, would you please donate to allow us to buy these tests. Thanks! <br><br><b>Created by A.J. Shulman for his Year 9 Coding Class at Upper Canada College.</b></p>
       </div>
